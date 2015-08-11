@@ -31,9 +31,8 @@ private static String TAG = "MainActivity";
 			mParams = mCamera.getParameters();
 		}
 		
-		mPreview = new CameraPreview(this, mCamera);
-		FrameLayout preview = (FrameLayout)findViewById(R.id.camera_preview);
-		preview.addView(mPreview);
+		mPreview = (CameraPreview)findViewById(R.id.camera_preview);
+		mPreview.init(mCamera);
 
 	}
 	
